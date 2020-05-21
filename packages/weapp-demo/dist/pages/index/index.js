@@ -26,16 +26,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var remax_one__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! remax/one */ "../egg-ui/node_modules/remax/one.js");
-/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.css */ "../egg-ui/dist/components/button/index.css");
-/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "../egg-ui/node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./index.css */ "../egg-ui/dist/components/button/index.css");
+/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
 function EggButton(props) {
-  var children = props.children;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(remax_one__WEBPACK_IMPORTED_MODULE_1__["View"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(remax_one__WEBPACK_IMPORTED_MODULE_1__["Button"], {
-    className: "egg-button"
-  }, children));
+  var children = props.children,
+      _props$size = props.size,
+      size = _props$size === void 0 ? 'large' : _props$size,
+      _props$className = props.className,
+      className = _props$className === void 0 ? '' : _props$className,
+      onClick = props.onClick,
+      _props$disable = props.disable,
+      disable = _props$disable === void 0 ? false : _props$disable,
+      _props$type = props.type,
+      type = _props$type === void 0 ? 'default' : _props$type;
+  var classNameProp = classnames__WEBPACK_IMPORTED_MODULE_2___default()('egg-button', className, size, type, {
+    'disable': disable
+  });
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(remax_one__WEBPACK_IMPORTED_MODULE_1__["Button"], {
+    className: classNameProp,
+    onTap: onClick
+  }, children);
 }
 
 /***/ }),
@@ -3051,6 +3067,73 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+/***/ }),
+
+/***/ "../egg-ui/node_modules/classnames/index.js":
+/*!**************************************************!*\
+  !*** ../egg-ui/node_modules/classnames/index.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* istanbul ignore next */
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+/*!
+  Copyright (c) 2017 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+
+/* global define */
+(function () {
+  'use strict';
+
+  var hasOwn = {}.hasOwnProperty;
+
+  function classNames() {
+    var classes = [];
+
+    for (var i = 0; i < arguments.length; i++) {
+      var arg = arguments[i];
+      if (!arg) continue;
+
+      var argType = _typeof(arg);
+
+      if (argType === 'string' || argType === 'number') {
+        classes.push(arg);
+      } else if (Array.isArray(arg) && arg.length) {
+        var inner = classNames.apply(null, arg);
+
+        if (inner) {
+          classes.push(inner);
+        }
+      } else if (argType === 'object') {
+        for (var key in arg) {
+          if (hasOwn.call(arg, key) && arg[key]) {
+            classes.push(key);
+          }
+        }
+      }
+    }
+
+    return classes.join(' ');
+  }
+
+  if ( true && module.exports) {
+    classNames.default = classNames;
+    module.exports = classNames;
+  } else if ( true && _typeof(__webpack_require__(/*! !webpack amd options */ "./node_modules/webpack/buildin/amd-options.js")) === 'object' && __webpack_require__(/*! !webpack amd options */ "./node_modules/webpack/buildin/amd-options.js")) {
+    // register as 'classnames', consistent with npm package name
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
+      return classNames;
+    }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else {
+    window.classNames = classNames;
+  }
+})();
 
 /***/ }),
 
@@ -6138,6 +6221,21 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/webpack/buildin/amd-options.js":
+/*!****************************************!*\
+  !*** (webpack)/buildin/amd-options.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* istanbul ignore next */
+/* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {/* globals __webpack_amd_options__ */
+module.exports = __webpack_amd_options__;
+
+/* WEBPACK VAR INJECTION */}.call(this, {}))
+
+/***/ }),
+
 /***/ "./src/pages/index/index.tsx":
 /*!***********************************!*\
   !*** ./src/pages/index/index.tsx ***!
@@ -6158,7 +6256,24 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _page = function _page() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__["createElement"](remax_one__WEBPACK_IMPORTED_MODULE_3__["View"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__["createElement"](egg_ui__WEBPACK_IMPORTED_MODULE_2__["EggButton"], null, "Default"));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__["createElement"](remax_one__WEBPACK_IMPORTED_MODULE_3__["View"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__["createElement"](egg_ui__WEBPACK_IMPORTED_MODULE_2__["EggButton"], null, "DEFAULT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__["createElement"](egg_ui__WEBPACK_IMPORTED_MODULE_2__["EggButton"], {
+    size: "medium"
+  }, "DEFAULT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__["createElement"](egg_ui__WEBPACK_IMPORTED_MODULE_2__["EggButton"], {
+    size: "small"
+  }, "DEFAULT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__["createElement"](egg_ui__WEBPACK_IMPORTED_MODULE_2__["EggButton"], {
+    size: "medium",
+    type: "light"
+  }, "DEFAULT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__["createElement"](egg_ui__WEBPACK_IMPORTED_MODULE_2__["EggButton"], {
+    size: "medium",
+    type: "reverse"
+  }, "DEFAULT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__["createElement"](egg_ui__WEBPACK_IMPORTED_MODULE_2__["EggButton"], {
+    size: "small",
+    disable: true
+  }, "DEFAULT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__["createElement"](egg_ui__WEBPACK_IMPORTED_MODULE_2__["EggButton"], {
+    size: "small",
+    type: "reverse",
+    disable: true
+  }, "DEFAULT"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Page(Object(_remax_runtime__WEBPACK_IMPORTED_MODULE_0__["createPageConfig"])(_page, "pages/index/index")));

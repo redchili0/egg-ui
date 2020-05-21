@@ -28,7 +28,8 @@
 
 		<template name="REMAX_TPL_1_button">
   <button
-    class="{{_h.v(i.props['class'])}}">
+    bindtap="{{_h.v(i.props['bindtap'])}}"
+class="{{_h.v(i.props['class'])}}">
     <block wx:for="{{i.children}}" wx:key="id">
       <template is="{{'REMAX_TPL_' + (tid + 1) + '_CONTAINER'}}" data="{{i: item, a: a, tid: tid + 1 }}" />
     </block>

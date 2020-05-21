@@ -1,11 +1,59 @@
 .egg-button {
-    width: 220rpx;
-    height: 48rpx;
-    border-radius: 6rpx;
     background-color:#6979F8 ;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 17rpx;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.egg-button.large {
+    width: 330rpx;
+    height: 72rpx;
+    border-radius: 8rpx;
+    font-size: 24rpx;
+}
+
+.egg-button.medium {
+    width: 270rpx;
+    height: 60rpx;
+    border-radius: 6rpx;
+    font-size: 22rpx;
+}
+
+.egg-button.small {
+    width: 220rpx;
+    height: 50rpx;
+    border-radius: 6rpx;
+    font-size: 20rpx;
+}
+
+.egg-button.light {
+    background-color: #E5E7FA;
+    color: #6979F8;
+}
+
+.egg-button.reverse {
+    background-color: white;
+    color: #6979F8;
+    border-width: 2rpx;
+    border-style: solid;
+    border-color: #6979F8;
+}
+
+.egg-button.disable {
+    border-color: #ECE9F1;
+    color: #D0C9D6;
+}
+
+.egg-button.reverse.disable {
+    border-color: #ECEBED;
+    color: #ECEBED;
+}
+
+/* reset default button style */
+button::after {
+    border: none;
 }

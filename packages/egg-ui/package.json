@@ -21,7 +21,9 @@
     "prebuild": "rimraf dist"
   },
   "dependencies": {
+    "@types/classnames": "^2.2.10",
     "@types/react": "^16.9.35",
+    "classnames": "^2.2.6",
     "react": "^16.13.1",
     "remax": "2.0.7",
     "typescript": "^3.9.3"
