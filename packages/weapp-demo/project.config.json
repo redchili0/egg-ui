@@ -22,7 +22,5 @@
 	"compileType": "miniprogram",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
-	"appid": "wx3bb6d5c2513a84ff",
-	"projectname": "eggplore-weapp-doc",
 	"condition": {}
 }

@@ -1,4 +1,4 @@
-# Remax Wechat
+# Remax Wechat With TypeScript
 
 使用 Remax 开发微信小程序。
 

@@ -1,22 +1,24 @@
 {
-    "compilerOptions": {
-      "target": "es6",
-      "module": "commonjs",
-      "moduleResolution": "node",
-      "strict": true,
-      "esModuleInterop": true,
-      "declaration": true,
-      "jsx": "preserve",
-      "outDir": "./esm",
-      "rootDir": "./components",
-      "baseUrl": "./",
-      "paths": {
-        "@/*": ["./components/*"]
-      },
+  "compilerOptions": {
+    "target": "es6",
+    "moduleResolution": "node",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "alwaysStrict": true,
+    "jsx": "preserve",
+    "lib": [
+      "ES6",
+      "DOM"
+    ],
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/components/*"]
     },
-    "include": [
-      "lib/**/*",
-      "typings/**/*",
-    ]
-  }
-  
+    "types": []
+  },
+  "include": ["src/components/**/*", "src/index.ts"]
+}

@@ -1,8 +1,8 @@
 {
-  "name": "@egg-ui/weapp-demo",
+  "name": "weapp-demo",
   "private": true,
   "version": "1.0.0",
-  "description": "Remax Project",
+  "description": "Remax Project With TypeScript",
   "main": "index.js",
   "keywords": [],
   "author": "ben <544652471@qq.com>",
@@ -14,10 +14,11 @@
   "dependencies": {
     "egg-ui": "^0.0.0",
     "react": "^16.12.0",
-    "remax": "^2.0.3"
+    "remax": "^2.0.7"
   },
   "devDependencies": {
-    "@types/react": "^16.9.35",
-    "cross-env": "^7.0.2"
+    "@types/react": "^16.9.16",
+    "cross-env": "^7.0.2",
+    "typescript": "^3.7.3"
   }
 }

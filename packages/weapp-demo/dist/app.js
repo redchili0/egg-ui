@@ -13,9 +13,9 @@ require('./remax-vendors.js');
 
 /***/ }),
 
-/***/ "./src/app.js":
+/***/ "./src/app.ts":
 /*!********************!*\
-  !*** ./src/app.js ***!
+  !*** ./src/app.ts ***!
   \********************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -39,12 +39,12 @@ var _app = _App;
 
 /***/ 0:
 /*!**************************!*\
-  !*** multi ./src/app.js ***!
+  !*** multi ./src/app.ts ***!
   \**************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/ben/Documents/w/code/myproject/library/eggplore-remax-ui/packages/weapp-demo/src/app.js */"./src/app.js");
+module.exports = __webpack_require__(/*! /Users/ben/Documents/w/code/myproject/library/eggplore-remax-ui/packages/weapp-demo/src/app.ts */"./src/app.ts");
 
 
 /***/ })

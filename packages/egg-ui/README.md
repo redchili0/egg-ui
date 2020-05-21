@@ -1,11 +1,11 @@
-# `@eggplore-remax-ui/components`
+# `egg-ui`
 
 > TODO: description
 
 ## Usage
 
 ```
-const components = require('@eggplore-remax-ui/components');
+const eggUi = require('egg-ui');
 
 // TODO: DEMONSTRATE API
 ```
