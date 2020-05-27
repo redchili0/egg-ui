@@ -2,7 +2,7 @@ import * as React from 'react';
 import { EggButton } from '@redchili/egg-ui/remax';
 import { View } from 'remax/one';
 
-export default () => {
+export default () => {cd 
   return (
     <View >
       <EggButton >DEFAULT</EggButton>

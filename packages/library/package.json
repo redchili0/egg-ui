@@ -13,7 +13,8 @@
     "components"
   ],
   "publishConfig": {
-    "registry": "https://registry.yarnpkg.com/"
+    "registry": "https://registry.yarnpkg.com/",
+    "access": "public"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
@@ -31,5 +32,6 @@
   "devDependencies": {
     "copyfiles": "^2.2.0",
     "rimraf": "^3.0.2"
-  }
+  },
+  "gitHead": "472f14d30dca47af46fe8bd4eea69036f8ed4b75"
 }
