@@ -1,7 +1,7 @@
 {
   "name": "weapp-demo",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Remax Project With TypeScript",
   "main": "index.js",
   "keywords": [],
