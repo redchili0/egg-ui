@@ -12,7 +12,7 @@
       "ES6",
       "DOM"
     ],
-    "outDir": "./dist/remax",
+    "outDir": "./dist",
     "rootDir": "./src",
     "baseUrl": "./",
     "paths": {

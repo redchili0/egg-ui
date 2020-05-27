@@ -20,6 +20,7 @@ interface Props {
 export default function EggButton(props: Props) {
 
     const { children, size = 'large', className = '', onClick, disable = false, type = 'default', shape = "" } = props;
+
     const [hover, setHover] = useState<string>('');
 
     const classNameProp = classNames('egg-button', className, size, type, hover, shape, { 'disable': disable });
@@ -31,7 +32,7 @@ export default function EggButton(props: Props) {
             const timer = setTimeout(() => {
                 setHover('');
                 clearTimeout(timer);
-            }, 600);
+            }, 400);
         }
     }
 

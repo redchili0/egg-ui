@@ -3,6 +3,7 @@
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "node",
+    "noImplicitAny": false,
     "strict": true,
     "esModuleInterop": true,
     "jsx": "preserve",
@@ -13,5 +14,6 @@
     },
     "lib": ["DOM", "ES2015"]
   },
-  "include": ["src/**/*", "typings/**/*"]
+  "include": ["src/**/*", "typings/**/*", "node_modules/@redchili/egg-ui"],
+  "exclude": ["node_modules"]
 }

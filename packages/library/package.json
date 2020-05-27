@@ -23,15 +23,17 @@
   },
   "dependencies": {
     "@types/classnames": "^2.2.10",
-    "@types/react": "^16.9.35",
     "classnames": "^2.2.6",
     "react": "^16.13.1",
-    "remax": "2.0.7",
-    "typescript": "^3.9.3"
+    "remax": "^.2.1.1"
   },
   "devDependencies": {
+    "@types/react": "^16.9.35",
     "copyfiles": "^2.2.0",
-    "rimraf": "^3.0.2"
+    "eslint": "^7.1.0",
+    "eslint-plugin-react-hooks": "^4.0.4",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.9.3"
   },
   "gitHead": "472f14d30dca47af46fe8bd4eea69036f8ed4b75"
 }

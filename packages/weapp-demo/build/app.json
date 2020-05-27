@@ -1,0 +1,9 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "Remax Wechat Demo - EGG-UI",
+    "navigationBarBackgroundColor": "#282c34"
+  }
+}

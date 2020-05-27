@@ -10,34 +10,34 @@
 }
 
 .egg-button.large {
-    width: 360px;
-    height: 80px;
-    border-radius: 10px;
-    font-size: 28px;
+    width: 360rpx;
+    height: 80rpx;
+    border-radius: 10rpx;
+    font-size: 28rpx;
 }
 .egg-button.large.round {
-  border-radius: 40px;
+  border-radius: 40rpx;
 }
 
 .egg-button.medium {
-    width: 300px;
-    height: 70px;
-    border-radius: 8px;
-    font-size: 24px;
+    width: 300rpx;
+    height: 70rpx;
+    border-radius: 8rpx;
+    font-size: 24rpx;
 }
 .egg-button.medium.round {
-  border-radius: 35px;
+  border-radius: 35rpx;
 }
 
 .egg-button.small {
-    width: 240px;
-    height: 60px;
-    border-radius: 8px;
-    font-size: 22px;
+    width: 240rpx;
+    height: 60rpx;
+    border-radius: 8rpx;
+    font-size: 22rpx;
 }
 
 .egg-button.small.round {
-  border-radius: 30px;
+  border-radius: 30rpx;
 }
 
 .egg-button.light {
@@ -48,7 +48,7 @@
 .egg-button.reverse {
     background-color: white;
     color: #6979F8;
-    border-width: 2px;
+    border-width: 2rpx;
     border-style: solid;
     border-color: #6979F8;
 }
@@ -94,6 +94,6 @@ button::after {
   
   .heartBeat {
     animation-name: heartBeat;
-    animation-duration: 0.4s;
+    animation-duration: 0.6s;
     animation-timing-function: cubic-bezier(.09,.59,.82,.32);
   }
