@@ -4,7 +4,7 @@ function toCamel(str) {
  });
 }
 
-export function styled(staticContent, ...dynamic) {
+export function css(staticContent, ...dynamic) {
   let res = '';
   for(let i = 0; i < staticContent.length; i +=1) {
       res += `${staticContent[i]}${i < staticContent.length -1 ? dynamic[i] : ""}`;

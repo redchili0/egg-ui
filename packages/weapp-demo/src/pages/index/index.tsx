@@ -1,11 +1,12 @@
 import React from 'react';
 import { EggButton } from '@redchili/egg-ui/src';
 import { View } from 'remax/one';
-import { styled } from '../../util/styled';
+// import { css } from '../../util/styled';
+import {css} from 'linaria';
 
 export default () => {
   return (
-    <View style={styled`
+    <View className={css`
       height: 1000rpx;
       display: flex;
       flex-direction: column;
