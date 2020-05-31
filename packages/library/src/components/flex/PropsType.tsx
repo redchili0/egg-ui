@@ -1,0 +1,7 @@
+export interface FlexPropsType {
+    direction?: 'row' | 'row-reverse' | 'column' | 'column-reverse';
+    wrap?: 'nowrap' | 'wrap' | 'wrap-reverse';
+    justify?: 'start' | 'end' | 'center' | 'between' | 'around';
+    align?: 'start' | 'center' | 'end' | 'baseline' | 'stretch';
+    alignContent?: 'start' | 'end' | 'center' | 'between' | 'around' | 'stretch';
+  }
