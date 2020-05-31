@@ -7,3 +7,5 @@ dist
 .linaria-cache
 
 .DS_Store
+
+.next
