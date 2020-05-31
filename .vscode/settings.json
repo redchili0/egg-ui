@@ -3,5 +3,6 @@
         "copyfiles",
         "linaria",
         "wxss"
-    ]
+    ],
+    "deno.enable": false
 }
