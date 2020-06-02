@@ -8,7 +8,7 @@ export default function App(props) {
     <>
       <Head>
         <title>Egg UI - 基于 Remax 实现的小程序、H5 组件库</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/image/setting/fried-egg.svg" />
       </Head>
       <DokzProvider
         headerLogo={<img src="/image/setting/fried-egg.svg" width="40px" />}
@@ -18,7 +18,7 @@ export default function App(props) {
         ]}
         sidebarOrdering={{
           "index.mdx": true,
-          Common_components: {
+          "通用组件": {
             "button.mdx": true,
           },
         }}

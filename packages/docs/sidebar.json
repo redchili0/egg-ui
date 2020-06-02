@@ -3,24 +3,24 @@
     "name": "pages",
     "children": [
         {
-            "path": "pages/Documents_Group",
-            "name": "Documents_Group",
+            "path": "pages/index.mdx",
+            "name": "index.mdx",
+            "title": "关于 Egg UI",
+            "url": "/index"
+        },
+        {
+            "path": "pages/通用组件",
+            "name": "通用组件",
             "children": [
                 {
-                    "path": "pages/Documents_Group/another.mdx",
-                    "name": "another.mdx",
-                    "title": "Another Document",
-                    "url": "/Documents_Group/another"
+                    "path": "pages/通用组件/button.mdx",
+                    "name": "button.mdx",
+                    "title": "Button 按钮",
+                    "url": "/通用组件/button"
                 }
             ],
             "size": null,
             "type": "directory"
-        },
-        {
-            "path": "pages/index.mdx",
-            "name": "index.mdx",
-            "title": "Getting started",
-            "url": "/index"
         }
     ],
     "size": null,
