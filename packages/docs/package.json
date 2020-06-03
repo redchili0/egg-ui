@@ -14,7 +14,8 @@
         "dokz": "latest",
         "next": "latest",
         "react": "16.13.1",
-        "react-dom": "16.13.1"
+        "react-dom": "16.13.1",
+        "remax": "^2.2.0"
     },
     "devDependencies": {
         "compose-function": "^3.0.3"
