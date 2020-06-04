@@ -10,6 +10,7 @@ interface Props {
     onSubmit: (data?: Data) => void
     registerError?: React.Dispatch<React.SetStateAction<{}>>;
     initialValues?: Data // NOTE: 组件动态初始值
+    checkMode?: 'blur' | 'input' // NOTE: 全局校验模式
 }
 
 type Rules = Record<string, Rule[]>
@@ -18,6 +19,7 @@ const EggForm: React.ForwardRefRenderFunction<{}, React.PropsWithChildren<Props>
     const { onSubmit, children } = props;
     const [data, setFormData] = useState<Data>();
     const [rules, setRules] = useState<Rules>();
+    const [checkModes, setCheckModes] = useState({});
 
     const setErrors = (error: Record<string, any>) => {
         const { registerError } = props;
@@ -36,10 +38,11 @@ const EggForm: React.ForwardRefRenderFunction<{}, React.PropsWithChildren<Props>
             })
         }
     }
-    // TODO: 收集所有的 formItem 的 rule 的规则集
-    const collectFieldItem = (rule: Rules, name: string) => {
+    // DONE: 收集所有的 formItem 的 rule 的规则集
+    const collectFieldItem = (rule: Rules, name: string, checkMode: 'input' | "blur") => {
         setRules({ ...rules, ...rule })
         setFormData({ ...data, ...{ [name]: "" } })
+        setCheckModes({ ...checkModes, ...{ [name]: checkMode || props.checkMode || 'blur' } }) // 优先级 fieldItem > form > normal
     }
 
     // DONE: 将 ref 实例传递给父组件，useImperativeHandle 和 forwardRef 一起使用
@@ -48,7 +51,6 @@ const EggForm: React.ForwardRefRenderFunction<{}, React.PropsWithChildren<Props>
     }));
     const checkFieldItem = (itemData: any) => {
         let tag = true;
-        
         const [name, value] = singleObjToArray(itemData);
         if (Object.prototype.hasOwnProperty.call(rules, name) && rules) {
             const rule = rules[name]
@@ -56,7 +58,6 @@ const EggForm: React.ForwardRefRenderFunction<{}, React.PropsWithChildren<Props>
                 const keys = Object.keys(item); // 
                 const ruleType = keys[0];
                 if (ruleType === 'required' && (item as RequireRule)[ruleType]) {
-
                     if (!value) {
                         setErrors({ [name]: item.message })
                         tag = false;
@@ -73,7 +74,6 @@ const EggForm: React.ForwardRefRenderFunction<{}, React.PropsWithChildren<Props>
                             setErrors({ [name]: false })
                         }
                     } else {
-                        // NOTE: 如何校验结果为 非，则执行第二个条件，设置错误信息
                         if (!(ruleMethod as RegExp).test(value)) {
                             setErrors({ [name]: item.message });
                             tag = false;
@@ -89,7 +89,7 @@ const EggForm: React.ForwardRefRenderFunction<{}, React.PropsWithChildren<Props>
         return tag;
     }
     const handleSubmit = () => {
-        // TODO: 判断是否有不合法的数据
+        // DONE: 判断是否有不合法的数据
         let tag = true;
         if (data) {
             Object.keys(data).forEach((key) => {
@@ -101,14 +101,32 @@ const EggForm: React.ForwardRefRenderFunction<{}, React.PropsWithChildren<Props>
         }
     }
 
-    const handleSetFormData = (itemData: any) => {
-        // TODO: 设置的同时需要校验数据是否正确
-        console.log("这里应该每次输入都会触发才对啊", itemData);
-        checkFieldItem(itemData);
+    const handleInput = (itemData: any) => {
+        // TODO:当前的输入校验模式是否是 input
+        const [name] = singleObjToArray(itemData);
+        if ((checkModes as Record<string, string>)[name] === 'input') {
+            checkFieldItem(itemData);
+        }
         setFormData({ ...data, ...itemData })
     }
+
+    const handleBlur = (itemData: any) => {
+        const [name] = singleObjToArray(itemData);
+        if ((checkModes as Record<string, string>)[name] === 'blur') {
+            checkFieldItem(itemData);
+        }
+    }
+
     return (
-        <FormContext.Provider value={{ setFormData: handleSetFormData, onSubmit: handleSubmit, collectFieldItem }}>
+        <FormContext.Provider value={
+            {
+                handleInput,
+                handleBlur,
+                collectFieldItem,
+                formData: data,
+                onSubmit: handleSubmit,
+            }
+        }>
             <ReForm>
                 {children}
             </ReForm>
