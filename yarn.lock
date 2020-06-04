@@ -12789,7 +12789,7 @@ remax-stats@^0.1.1:
     git-url-parse "^11.1.2"
     is-git-repository "^1.1.1"
 
-remax@^2.1.1:
+remax@2.1.1, remax@^2.1.1:
   version "2.1.1"
   resolved "https://registry.npm.taobao.org/remax/download/remax-2.1.1.tgz#556411206d703bc75e5b88d18fff128dd983da8e"
   integrity sha1-VWQRIG1wO8deW4jRj/8SjdmD2o4=

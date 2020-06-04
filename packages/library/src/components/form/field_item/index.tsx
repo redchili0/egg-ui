@@ -1,35 +1,46 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { View } from 'remax/one';
 import { FormContext } from '../context';
 
-interface RequireRule {
+export interface RequireRule {
     required: boolean;
     message: string;
 }
 
-interface PatternRule {
+export interface PatternRule {
     pattern: RegExp | ((value: any) => boolean);
     message: string;
 }
 
-type Rule = RequireRule | PatternRule
+export type Rule = RequireRule | PatternRule
 
 interface Props {
-    rule?: Rule[]
+    name: string;
+    rule?: Rule[];
 }
 
 export default function EggFieldItem(props: React.PropsWithChildren<Props>) {
     const { children } = props;
-    const { setFormData } = useContext(FormContext);
-    const [value, setValue] = useState<any>();
-    const handleInput = (itemKey: string, itemValue: any) => {
+    const { setFormData, collectFieldItem } = useContext(FormContext);
+
+    useEffect(() => {
+        const { rule, name } = props;
+
+        if (rule) {
+            collectFieldItem({ [name]: rule }, name)
+        }
+    }, [])
+
+    const handleInput = (name: string, itemValue: any) => {
         // DONE: 判断 itemValue 是否是 event , 还是简单值 
+        console.log('这里没有触发吗', name);
         if (typeof itemValue === 'object' && itemValue.target) {
-            setFormData({ [itemKey]: itemValue.target.value });
+            setFormData({ [name]: itemValue.target.value });
         } else {
-            setFormData({ [itemKey]: itemValue });
+            setFormData({ [name]: itemValue });
         }
     }
+
     return <View>
         {
             React.Children.map(children, (child) => {
@@ -41,13 +52,19 @@ export default function EggFieldItem(props: React.PropsWithChildren<Props>) {
                     const childProps = {
                         ...child.props,
                         ...{
-                            value,
+                            value: "",
+                            name: "测试",
+                            onFocus: () => {
+                                console.log('校验错误')
+                            },
                             onInput: (itemValue: any) => handleInput(child.props.name, itemValue)
                         }
                     }
                     return React.cloneElement(child, childProps)
+                } else {
+
+                    return child
                 }
-                return child
             })
         }
     </View>
