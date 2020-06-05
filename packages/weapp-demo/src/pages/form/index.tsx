@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { EggForm, EggFieldItem, EggSubmit } from '@redchili/egg-ui/src';
+import { EggForm, EggFieldItem, EggSubmit } from '@redchili/egg-ui';
 
 import { Input, Label } from 'remax/one';
 

@@ -1,7 +1,6 @@
 import React from 'react';
-import { EggButton } from '@redchili/egg-ui/src';
+import { EggButton } from '@redchili/egg-ui';
 import { View } from 'remax/one';
-// import { css } from '../../util/styled';
 import {css} from 'linaria';
 
 export default () => {

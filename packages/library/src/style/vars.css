@@ -1,2 +1,30 @@
-
-/*# sourceMappingURL=vars.css.map */
+:root {
+    --animate-duration: 1s;
+    --animate-delay: 1s;
+    --animate-repeat: 1;
+    /* 主色调 */
+    --primary-color: #be52f2;
+    /* 基调色 */
+    --accent-color: #6979f8;
+    /* 语义-成功 */
+    --semantic-success: #00c48c;
+    /* 语义-失败 */
+    --semantic-fail: #ff647c;
+    /* 语义-警告 */
+    --semantic-warn: #ffa26b;
+    /* 中性-黑色 */
+    --neutral-black: #1a051d;
+    /* 中性-灰色 */
+    --neutral-grey: #F7F5F9;
+    /* 常用基础组件样式块 */
+    --button: {
+      display: flex;
+      color: white;
+      background-color:var(--accent-color);
+      justify-content: center;
+      align-items: center;
+      border: none;
+      outline: none;
+      box-sizing: border-box;
+    }
+  }
