@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex } from '@redchili/egg-ui/src';
+import { Flex } from '@redchili/egg-ui';
 import { View } from 'remax/one';
 import './index.css'
 

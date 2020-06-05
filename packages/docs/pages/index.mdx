@@ -3,9 +3,22 @@ name: 关于 Egg UI
 ---
 
 # Remax 小程序渲染引擎
-
+Remax 是使用真正的 React 构建跨平台小程序的渲染引擎，支持阿里程序、微信小程序、头条小程序以及 Web 应用的开发，默认支持 TypeScript 开发，提供完整的组件和 API 类型定义，为你的项目保驾护航。
 # Egg UI
-
+Egg UI 基于 Remax 开发，组件库使用 typescript 编写，具有完整的类型定义。目前仅支持 微信小程序和 H5，其他平台正在开发中。
 # 安装
 
+```bash
+yarn add @redchili/egg-ui
+```
 # 使用
+```tsx
+import React from 'react';
+import { EggButton } from '@redchili/egg-ui';
+
+export default function Custom() {
+    return <div>
+        <EggButton>确认</EggButton>
+    </div>
+}
+```

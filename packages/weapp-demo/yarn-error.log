@@ -1,20 +1,25 @@
 Arguments: 
-  /Users/ben/.nvm/versions/node/v14.1.0/bin/node /Users/ben/.yarn/bin/yarn.js remove react @types/react
+  /Users/ben/.nvm/versions/node/v13.0.1/bin/node /Users/ben/.yarn/bin/yarn.js dev
 
 PATH: 
-  /usr/local/Cellar/pyenv-virtualenv/1.1.3/shims:/Users/ben/.pyenv/shims:/Users/ben/.pyenv/bin:/usr/local/opt/ruby/bin:/Users/ben/.nvm/versions/node/v14.1.0/bin:/Users/ben/.fastlane/bin:/Users/ben/Documents/flutter/bin:/Users/ben/.yarn/bin:/Users/ben/.config/yarn/global/node_modules/.bin:/Users/ben/Downloads/cocos2d-x-3.16/templates:/Users/ben/Downloads:/Users/ben/Downloads/cocos2d-x-3.16/tools/cocos2d-console/bin:/Users/ben/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/usr/local/share/dotnet:/Library/Apple/usr/bin
+  /Users/ben/opt/anaconda3/bin:/Users/ben/opt/anaconda3/condabin:/usr/local/opt/ruby/bin:/Users/ben/.nvm/versions/node/v13.0.1/bin:/Users/ben/.fastlane/bin:/Users/ben/Documents/flutter/bin:/Users/ben/.yarn/bin:/Users/ben/.config/yarn/global/node_modules/.bin:/Users/ben/Downloads/cocos2d-x-3.16/templates:/Users/ben/Downloads:/Users/ben/Downloads/cocos2d-x-3.16/tools/cocos2d-console/bin:/Users/ben/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/usr/local/share/dotnet:/Library/Apple/usr/bin
 
 Yarn version: 
   1.22.4
 
 Node version: 
-  14.1.0
+  13.0.1
 
 Platform: 
   darwin x64
 
 Trace: 
-  Error: ENOENT: no such file or directory, lstat '/Users/ben/Documents/w/code/myproject/library/egg-ui/packages/weapp-demo/node_modules/@redchili/egg-ui/node_modules/@remax/cli/node_modules'
+  SyntaxError: /Users/ben/Documents/w/code/myproject/library/egg-ui/packages/weapp-demo/package.json: Unexpected token < in JSON at position 649
+      at JSON.parse (<anonymous>)
+      at /Users/ben/.yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/Users/ben/.yarn/lib/cli.js:310:30)
+      at /Users/ben/.yarn/lib/cli.js:321:13
 
 npm manifest: 
   {
@@ -31,11 +36,27 @@ npm manifest:
     },
     "dependencies": {
       "@redchili/egg-ui": "^0.0.2",
-      "remax": "^2.0.7"
+      "linaria": "^1.3.3",
+      "react": "^16.13.1",
+      "remax": "2.1.1"
     },
     "devDependencies": {
+      "@types/react": "^16.9.35",
+      "babel-loader": "^8.1.0",
+      "babel-preset-remax": "^2.1.1",
       "cross-env": "^7.0.2",
-      "typescript": "^3.7.3"
+      "cssnano": "^4.1.10",
+      "husky": "^4.2.5",
+  <<<<<<< HEAD
+      "postcss-apply": "^0.12.0",
+      "postcss-css-variables": "^0.17.0",
+  =======
+      "postcss-import": "^12.0.1",
+      "postcss-preset-env": "^6.7.0",
+  >>>>>>> master
+      "typescript": "^3.7.3",
+      "webpack": "^4.43.0",
+      "webpack-cli": "^3.3.11"
     }
   }
 
@@ -1014,6 +1035,25 @@ Lockfile:
       "@babel/runtime" "^7.7.7"
       hoist-non-react-statics "^3.3.1"
   
+  "@redchili/egg-ui@^0.0.2":
+    version "0.0.2"
+    resolved "https://registry.npm.taobao.org/@redchili/egg-ui/download/@redchili/egg-ui-0.0.2.tgz#4ed06d39f92330e92d43839757fb24fe84c69b53"
+    integrity sha1-TtBtOfkjMOktQ4OXV/sk/oTGm1M=
+    dependencies:
+      "@types/classnames" "^2.2.10"
+      "@types/react" "^16.9.35"
+      classnames "^2.2.6"
+      react "^16.13.1"
+      remax "2.0.7"
+      typescript "^3.9.3"
+  
+  "@remax/ali@2.0.7":
+    version "2.0.7"
+    resolved "https://registry.npm.taobao.org/@remax/ali/download/@remax/ali-2.0.7.tgz#204394dcf60167b86490683e89abeb075dd9d1a1"
+    integrity sha1-IEOU3PYBZ7hkkGg+iavrB13Z0aE=
+    dependencies:
+      mini-types "^0.1.1"
+  
   "@remax/ali@2.1.1":
     version "2.1.1"
     resolved "https://registry.yarnpkg.com/@remax/ali/-/ali-2.1.1.tgz#4c24b388781ecf3b8243e6507fb832b1b14e72d4"
@@ -1021,6 +1061,60 @@ Lockfile:
     dependencies:
       "@remax/shared" "2.1.1"
       mini-types "^0.1.1"
+  
+  "@remax/cli@2.0.7":
+    version "2.0.7"
+    resolved "https://registry.npm.taobao.org/@remax/cli/download/@remax/cli-2.0.7.tgz#c8d2357b8867ccd9e0307067308e2e666a226d5e"
+    integrity sha1-yNI1e4hnzNngMHBnMI4uZmoibV4=
+    dependencies:
+      "@babel/core" "^7.7.4"
+      "@babel/helper-module-imports" "^7.7.4"
+      "@babel/preset-env" "^7.7.4"
+      "@babel/preset-typescript" "^7.7.4"
+      "@babel/register" "^7.7.0"
+      "@babel/types" "^7.7.4"
+      "@remax/macro" "2.0.7"
+      "@remax/postcss-px2units" "^0.2.0"
+      "@remax/postcss-tag" "2.0.7"
+      "@remax/types" "2.0.7"
+      "@types/webpackbar" "^4.0.0"
+      address "^1.1.2"
+      babel-loader "^8.1.0"
+      babel-preset-remax "2.0.7"
+      chokidar "^3.4.0"
+      clean-webpack-plugin "^3.0.0"
+      copy-webpack-plugin "^5.1.1"
+      css-loader "^3.4.2"
+      dotenv "^8.2.0"
+      dotenv-expand "^5.1.0"
+      ejs "^3.0.1"
+      enhanced-resolve "^4.1.1"
+      express "^4.17.1"
+      file-loader "^6.0.0"
+      html-webpack-plugin "^4.0.4"
+      htmlparser2 "^4.0.0"
+      loader-utils "^2.0.0"
+      lodash "^4.17.11"
+      magic-string "^0.25.7"
+      micromatch "^4.0.2"
+      mini-css-extract-plugin "^0.9.0"
+      node-notifier "^7.0.0"
+      postcss-loader "^3.0.0"
+      postcss-preset-env "^6.7.0"
+      regenerator-runtime "^0.13.3"
+      remax-stats "^0.1.1"
+      resolve "^1.12.0"
+      schema-utils "^2.6.1"
+      slash2 "^2.0.0"
+      style-loader "^1.1.3"
+      universal-analytics "^0.4.20"
+      webpack "^4.42.1"
+      webpack-chain "^6.4.0"
+      webpack-dev-server "^3.10.3"
+      webpack-sources "^1.4.3"
+      webpack-virtual-modules "^0.2.1"
+      webpackbar "^4.0.0"
+      yargs "^15.1.0"
   
   "@remax/cli@2.1.1":
     version "2.1.1"
@@ -1076,6 +1170,15 @@ Lockfile:
       webpackbar "^4.0.0"
       yargs "^15.1.0"
   
+  "@remax/macro@2.0.7":
+    version "2.0.7"
+    resolved "https://registry.npm.taobao.org/@remax/macro/download/@remax/macro-2.0.7.tgz#79fb144ebbdc3594f031c9d085ca148b31a7d34f"
+    integrity sha1-efsUTrvcNZTwMcnQhcoUizGn008=
+    dependencies:
+      "@remax/types" "2.0.7"
+      "@types/babel__traverse" "^7.0.8"
+      slash2 "^2.0.0"
+  
   "@remax/macro@2.1.1":
     version "2.1.1"
     resolved "https://registry.yarnpkg.com/@remax/macro/-/macro-2.1.1.tgz#067c5f96e7d52042eae1ac4ca0308fd6cd70c3aa"
@@ -1084,6 +1187,20 @@ Lockfile:
       "@remax/types" "2.1.1"
       "@types/babel__traverse" "^7.0.8"
       slash2 "^2.0.0"
+  
+  "@remax/one@2.0.7":
+    version "2.0.7"
+    resolved "https://registry.npm.taobao.org/@remax/one/download/@remax/one-2.0.7.tgz#32e9bdbd58674ba89c782da9c0b5b43c13a79197"
+    integrity sha1-Mum9vVhnS6iceC2pwLW0PBOnkZc=
+    dependencies:
+      "@remax/ali" "2.0.7"
+      "@remax/router" "2.0.7"
+      "@remax/toutiao" "2.0.7"
+      "@remax/wechat" "2.0.7"
+      clsx "^1.1.0"
+      react-autosize-textarea "^7.0.0"
+      react-lazyload "^2.6.7"
+      rmc-feedback "^2.0.0"
   
   "@remax/one@2.1.1":
     version "2.1.1"
@@ -1107,6 +1224,11 @@ Lockfile:
       object-assign "^4.1.1"
       postcss "^6.0.19"
   
+  "@remax/postcss-tag@2.0.7":
+    version "2.0.7"
+    resolved "https://registry.npm.taobao.org/@remax/postcss-tag/download/@remax/postcss-tag-2.0.7.tgz#e1ed692952e1cdf27d806c2c8bc088bb7e5925be"
+    integrity sha1-4e1pKVLhzfJ9gGwsi8CIu35ZJb4=
+  
   "@remax/postcss-tag@2.1.1":
     version "2.1.1"
     resolved "https://registry.yarnpkg.com/@remax/postcss-tag/-/postcss-tag-2.1.1.tgz#04e35bc71eba56364d5272b8286923cbc079bc09"
@@ -1117,6 +1239,15 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/@remax/react-router-cache-route/-/react-router-cache-route-1.8.4.tgz#cf9ddad48b9ee5ef8439c705f2c865bd2c673543"
     integrity sha512-W17U/5/y6ZjMdfVw400AY3hrBJCr6UC+f/6VUANU0O41pH68eGY0gwxRlR3aa6eQfT6ztMSfvLLPjzBAOjhoKg==
   
+  "@remax/router@2.0.7":
+    version "2.0.7"
+    resolved "https://registry.npm.taobao.org/@remax/router/download/@remax/router-2.0.7.tgz#62b4732dcaac87642c21c1c85687f64fbd0e0d18"
+    integrity sha1-YrRzLcqsh2QsIcHIVof2T70ODRg=
+    dependencies:
+      "@remax/react-router-cache-route" "^1.8.4"
+      history "^4.10.1"
+      react-router-dom "^5.1.2"
+  
   "@remax/router@2.1.1":
     version "2.1.1"
     resolved "https://registry.yarnpkg.com/@remax/router/-/router-2.1.1.tgz#2964789a50e05094293b859e1e7fb4f7bb0ea465"
@@ -1125,6 +1256,16 @@ Lockfile:
       "@remax/react-router-cache-route" "^1.8.4"
       history "^4.10.1"
       react-router-dom "^5.1.2"
+  
+  "@remax/runtime@2.0.7":
+    version "2.0.7"
+    resolved "https://registry.npm.taobao.org/@remax/runtime/download/@remax/runtime-2.0.7.tgz#310c235e12d0a2410b631645f47e88ec7d80cb07"
+    integrity sha1-MQwjXhLQokELYxZF9H6I7H2Aywc=
+    dependencies:
+      "@remax/web" "2.0.7"
+      qs "^6.9.3"
+      react-reconciler "0.25.1"
+      scheduler "0.19.1"
   
   "@remax/runtime@2.1.1":
     version "2.1.1"
@@ -1141,12 +1282,27 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/@remax/shared/-/shared-2.1.1.tgz#d2fa85c1877d7a745e07c1880257c4e88c7fe671"
     integrity sha512-XUJtxhs4tePZilFLBdjQiCHYS0NjEFTS0yqd9ke6tEegOG7HOEWrF9Q4sbwn+75w/w+I+5lKYOhXDErcBAcyag==
   
+  "@remax/toutiao@2.0.7":
+    version "2.0.7"
+    resolved "https://registry.npm.taobao.org/@remax/toutiao/download/@remax/toutiao-2.0.7.tgz#acfb87d21ba83f6723c8f06a2e6782caae6c2241"
+    integrity sha1-rPuH0huoP2cjyPBqLmeCyq5sIkE=
+  
   "@remax/toutiao@2.1.1":
     version "2.1.1"
     resolved "https://registry.yarnpkg.com/@remax/toutiao/-/toutiao-2.1.1.tgz#9a55b41c323c17f649dd9274da4251ea8957b8db"
     integrity sha512-1IoKjGgWJHQBq+bXjU8ZdRDApCZ7exFF0ayVbx5U66ykZ4H+/pwFH3Pusgt45rm/fmo8ho18t2ObODJXRsHVOw==
     dependencies:
       "@remax/shared" "2.1.1"
+  
+  "@remax/types@2.0.7":
+    version "2.0.7"
+    resolved "https://registry.npm.taobao.org/@remax/types/download/@remax/types-2.0.7.tgz#f88e29bddc74e71914b13157eea56c1f957b09b0"
+    integrity sha1-+I4pvdx05xkUsTFX7qVsH5V7CbA=
+    dependencies:
+      "@babel/types" "^7.8.0"
+      "@types/webpack" "^4.41.10"
+      "@types/yargs" "^15.0.0"
+      webpack-chain "^6.4.0"
   
   "@remax/types@2.1.1":
     version "2.1.1"
@@ -1158,6 +1314,16 @@ Lockfile:
       "@types/yargs" "^15.0.0"
       webpack-chain "^6.4.0"
   
+  "@remax/web@2.0.7":
+    version "2.0.7"
+    resolved "https://registry.npm.taobao.org/@remax/web/download/@remax/web-2.0.7.tgz#85000f5036c74497e81ba1ea6e1f8a694e47c1bf"
+    integrity sha1-hQAPUDbHRJfoG6Hqbh+KaU5Hwb8=
+    dependencies:
+      "@loadable/component" "^5.12.0"
+      "@remax/router" "2.0.7"
+      rmc-pull-to-refresh "^1.0.12"
+      umi-hd "^5.0.1"
+  
   "@remax/web@2.1.1":
     version "2.1.1"
     resolved "https://registry.yarnpkg.com/@remax/web/-/web-2.1.1.tgz#e824389b090ad9e7c9fd8c374189b222e305fe59"
@@ -1167,6 +1333,13 @@ Lockfile:
       "@remax/router" "2.1.1"
       rmc-pull-to-refresh "^1.0.12"
       umi-hd "^5.0.1"
+  
+  "@remax/wechat@2.0.7":
+    version "2.0.7"
+    resolved "https://registry.npm.taobao.org/@remax/wechat/download/@remax/wechat-2.0.7.tgz#91d8447a5c5b667833c89bb645b3fffae7e67ba8"
+    integrity sha1-kdhEelxbZngzyJu2RbP/+ufme6g=
+    dependencies:
+      miniprogram-api-typings "^2.10.4"
   
   "@remax/wechat@2.1.1":
     version "2.1.1"
@@ -1206,6 +1379,11 @@ Lockfile:
     integrity sha512-izlm+hbqWN9csuB9GSMfCnAyd3/57XZi3rfz1B0C4QBGVMp+9xQ7+9KYnep+ySfUrCWql4lGzkLf0XmprXcz9g==
     dependencies:
       "@types/node" "*"
+  
+  "@types/classnames@^2.2.10":
+    version "2.2.10"
+    resolved "https://registry.npm.taobao.org/@types/classnames/download/@types/classnames-2.2.10.tgz#cc658ca319b6355399efc1f5b9e818f1a24bf999"
+    integrity sha1-zGWMoxm2NVOZ78H1uegY8aJL+Zk=
   
   "@types/color-convert@*":
     version "1.9.0"
@@ -1910,6 +2088,26 @@ Lockfile:
       cosmiconfig "^6.0.0"
       resolve "^1.12.0"
   
+  babel-preset-remax@2.0.7:
+    version "2.0.7"
+    resolved "https://registry.npm.taobao.org/babel-preset-remax/download/babel-preset-remax-2.0.7.tgz#655ad261e4770969f169ae7f6addbf74a27bc343"
+    integrity sha1-ZVrSYeR3CWnxaa5/at2/dKJ7w0M=
+    dependencies:
+      "@babel/helper-plugin-utils" "^7.0.0"
+      "@babel/plugin-proposal-class-properties" "^7.7.4"
+      "@babel/plugin-proposal-decorators" "^7.7.4"
+      "@babel/plugin-proposal-nullish-coalescing-operator" "^7.7.4"
+      "@babel/plugin-proposal-object-rest-spread" "^7.7.4"
+      "@babel/plugin-proposal-optional-chaining" "^7.7.4"
+      "@babel/plugin-syntax-jsx" "^7.7.4"
+      "@babel/preset-env" "^7.7.4"
+      "@babel/preset-react" "^7.7.4"
+      "@babel/preset-typescript" "^7.7.4"
+      "@umijs/babel-plugin-auto-css-modules" "^3.1.1"
+      babel-plugin-auto-import "^1.0.5"
+      babel-plugin-macros "^2.8.0"
+      lodash "^4.17.15"
+  
   babel-preset-remax@2.1.1:
     version "2.1.1"
     resolved "https://registry.yarnpkg.com/babel-preset-remax/-/babel-preset-remax-2.1.1.tgz#a73ffeb34d97ddb896682857095b63cff555b421"
@@ -2189,7 +2387,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/bytes/-/bytes-3.1.0.tgz#f6cf7933a360e0588fa9fde85651cdc7f805d1f6"
     integrity sha512-zauLjrfCG+xvoyaqLoV8bLVXXNGC4JqlxFCutSDWA6fJrTo2ZuvLYTqZ7aHBLZSMOopbzwv8f+wZcVzfVTI2Dg==
   
-  cacache@^12.0.2:
+  cacache@^12.0.2, cacache@^12.0.3:
     version "12.0.4"
     resolved "https://registry.yarnpkg.com/cacache/-/cacache-12.0.4.tgz#668bcbd105aeb5f1d92fe25570ec9525c8faa40c"
     integrity sha512-a0tMB40oefvuInr4Cwb3GerbL9xTj1D5yg0T5xrjGCGyfvbxseIXX7BAO/u/hIXdafzOI5JC3wDwHyf24buOAQ==
@@ -2398,10 +2596,10 @@ Lockfile:
       isobject "^3.0.0"
       static-extend "^0.1.1"
   
-  classnames@^2.2.5:
+  classnames@^2.2.5, classnames@^2.2.6:
     version "2.2.6"
-    resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
-    integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
+    resolved "https://registry.npm.taobao.org/classnames/download/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
+    integrity sha1-Q5Nb/90pHzJtrQogUwmzjQD2UM4=
   
   clean-css@^4.2.3:
     version "4.2.3"
@@ -2637,6 +2835,24 @@ Lockfile:
     version "0.1.1"
     resolved "https://registry.yarnpkg.com/copy-descriptor/-/copy-descriptor-0.1.1.tgz#676f6eb3c39997c2ee1ac3a924fd6124748f578d"
     integrity sha1-Z29us8OZl8LuGsOpJP1hJHSPV40=
+  
+  copy-webpack-plugin@^5.1.1:
+    version "5.1.1"
+    resolved "https://registry.npm.taobao.org/copy-webpack-plugin/download/copy-webpack-plugin-5.1.1.tgz#5481a03dea1123d88a988c6ff8b78247214f0b88"
+    integrity sha1-VIGgPeoRI9iKmIxv+LeCRyFPC4g=
+    dependencies:
+      cacache "^12.0.3"
+      find-cache-dir "^2.1.0"
+      glob-parent "^3.1.0"
+      globby "^7.1.1"
+      is-glob "^4.0.1"
+      loader-utils "^1.2.3"
+      minimatch "^3.0.4"
+      normalize-path "^3.0.0"
+      p-limit "^2.2.1"
+      schema-utils "^1.0.0"
+      serialize-javascript "^2.1.2"
+      webpack-log "^2.0.0"
   
   core-js-compat@^3.6.2:
     version "3.6.5"
@@ -3022,6 +3238,13 @@ Lockfile:
       bn.js "^4.1.0"
       miller-rabin "^4.0.0"
       randombytes "^2.0.0"
+  
+  dir-glob@^2.0.0:
+    version "2.2.2"
+    resolved "https://registry.npm.taobao.org/dir-glob/download/dir-glob-2.2.2.tgz#fa09f0694153c8918b18ba0deafae94769fc50c4"
+    integrity sha1-+gnwaUFTyJGLGLoN6vrpR2n8UMQ=
+    dependencies:
+      path-type "^3.0.0"
   
   dns-equal@^1.0.0:
     version "1.0.0"
@@ -3782,7 +4005,7 @@ Lockfile:
     dependencies:
       is-glob "^4.0.1"
   
-  glob@7.1.6, glob@^7.0.3, glob@^7.1.3, glob@^7.1.4:
+  glob@7.1.6, glob@^7.0.3, glob@^7.1.2, glob@^7.1.3, glob@^7.1.4:
     version "7.1.6"
     resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.6.tgz#141f33b81a7c2492e125594307480c46679278a6"
     integrity sha512-LwaxwyZ72Lk7vZINtNNrywX0ZuLyStrdDtabefZKAY5ZGJhVtgdznluResxNmPitE0SAO+O26sWTHeKSI2wMBA==
@@ -3809,6 +4032,18 @@ Lockfile:
       object-assign "^4.0.1"
       pify "^2.0.0"
       pinkie-promise "^2.0.0"
+  
+  globby@^7.1.1:
+    version "7.1.1"
+    resolved "https://registry.npm.taobao.org/globby/download/globby-7.1.1.tgz#fb2ccff9401f8600945dfada97440cca972b8680"
+    integrity sha1-+yzP+UAfhgCUXfral0QMypcrhoA=
+    dependencies:
+      array-union "^1.0.1"
+      dir-glob "^2.0.0"
+      glob "^7.1.2"
+      ignore "^3.3.5"
+      pify "^3.0.0"
+      slash "^1.0.0"
   
   got@9.6.0:
     version "9.6.0"
@@ -4131,6 +4366,11 @@ Lockfile:
     version "0.1.5"
     resolved "https://registry.yarnpkg.com/iferr/-/iferr-0.1.5.tgz#c60eed69e6d8fdb6b3104a1fcbca1c192dc5b501"
     integrity sha1-xg7taebY/bazEEofy8ocGS3FtQE=
+  
+  ignore@^3.3.5:
+    version "3.3.10"
+    resolved "https://registry.npm.taobao.org/ignore/download/ignore-3.3.10.tgz?cache=0&sync_timestamp=1590160538778&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fignore%2Fdownload%2Fignore-3.3.10.tgz#0a97fb876986e8081c631160f8f9f389157f0043"
+    integrity sha1-Cpf7h2mG6AgcYxFg+PnziRV/AEM=
   
   import-cwd@^2.0.0:
     version "2.1.0"
@@ -5377,7 +5617,7 @@ Lockfile:
     dependencies:
       p-try "^1.0.0"
   
-  p-limit@^2.0.0, p-limit@^2.2.0:
+  p-limit@^2.0.0, p-limit@^2.2.0, p-limit@^2.2.1:
     version "2.3.0"
     resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-2.3.0.tgz#3dd33c647a214fdfffd835933eb086da0dc21db1"
     integrity sha512-//88mFWSJx8lxCzwdAABTJL2MyWB12+eIY7MDL2SqLmAkeKU9qxRvWuSyTjm3FUmpBEMuFfckAIqEaVGUDxb6w==
@@ -5585,6 +5825,13 @@ Lockfile:
     integrity sha512-n43JRhlUKUAlibEJhPeir1ncUID16QnEjNpwzNdO3Lm4ywrBpBZ5oLD0I6br9evr1Y9JTqwRtAh7JLoOzAQdVA==
     dependencies:
       isarray "0.0.1"
+  
+  path-type@^3.0.0:
+    version "3.0.0"
+    resolved "https://registry.npm.taobao.org/path-type/download/path-type-3.0.0.tgz#cef31dc8e0a1a3bb0d105c0cd97cf3bf47f4e36f"
+    integrity sha1-zvMdyOCho7sNEFwM2Xzzv0f0428=
+    dependencies:
+      pify "^3.0.0"
   
   path-type@^4.0.0:
     version "4.0.0"
@@ -6462,6 +6709,22 @@ Lockfile:
       git-url-parse "^11.1.2"
       is-git-repository "^1.1.1"
   
+  remax@2.0.7:
+    version "2.0.7"
+    resolved "https://registry.npm.taobao.org/remax/download/remax-2.0.7.tgz#e4ee932de422c24849688321f1fce666628bf6f1"
+    integrity sha1-5O6TLeQiwkhJaIMh8fzmZmKL9vE=
+    dependencies:
+      "@remax/ali" "2.0.7"
+      "@remax/cli" "2.0.7"
+      "@remax/macro" "2.0.7"
+      "@remax/one" "2.0.7"
+      "@remax/runtime" "2.0.7"
+      "@remax/toutiao" "2.0.7"
+      "@remax/web" "2.0.7"
+      "@remax/wechat" "2.0.7"
+      mini-types "^0.1.1"
+      miniprogram-api-typings "^2.10.4"
+  
   remax@^2.0.7:
     version "2.1.1"
     resolved "https://registry.yarnpkg.com/remax/-/remax-2.1.1.tgz#556411206d703bc75e5b88d18fff128dd983da8e"
@@ -6866,6 +7129,11 @@ Lockfile:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/slash2/-/slash2-2.0.0.tgz#f4e0a11708b8545b912695981cf7096f52c63487"
     integrity sha512-7ElvBydJPi3MHU/KEOblFSbO/skl4Z69jKkFCpYIYVOMSIZsKi4gYU43HGeZPmjxCXrHekoDAAewphPQNnsqtA==
+  
+  slash@^1.0.0:
+    version "1.0.0"
+    resolved "https://registry.npm.taobao.org/slash/download/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
+    integrity sha1-xB8vbDn8FtHNF61LXYlhFK5HDVU=
   
   snapdragon-node@^2.0.1:
     version "2.1.1"
@@ -7378,10 +7646,10 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
     integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
   
-  typescript@^3.7.3:
+  typescript@^3.7.3, typescript@^3.9.3:
     version "3.9.3"
-    resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.3.tgz#d3ac8883a97c26139e42df5e93eeece33d610b8a"
-    integrity sha512-D/wqnB2xzNFIcoBG9FG8cXRDjiqSTbG2wd8DMZeQyJlP1vfTkIxH4GKveWaEBYySKIg+USu+E+EDIR47SqnaMQ==
+    resolved "https://registry.npm.taobao.org/typescript/download/typescript-3.9.3.tgz#d3ac8883a97c26139e42df5e93eeece33d610b8a"
+    integrity sha1-06yIg6l8JhOeQt9ek+7s4z1hC4o=
   
   umi-hd@^5.0.1:
     version "5.0.1"
