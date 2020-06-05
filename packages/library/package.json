@@ -5,7 +5,7 @@
   "author": "ben14 <544652471@qq.com>",
   "homepage": "",
   "license": "ISC",
-  "main": "dist",
+  "main": "dist/index.ts",
   "directories": {
     "test": "__tests__"
   },
@@ -19,8 +19,7 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
     "dev": "gulp dev",
-    "build:weapp": "node ./scripts/copy.js && tsc && gulp",
-    "prebuild": "rimraf dist"
+    "build:weapp": "rimraf dist && node ./scripts/copy.js && gulp"
   },
   "dependencies": {
     "@types/classnames": "^2.2.10",

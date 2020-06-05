@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
-import { EggForm, EggFieldItem, EggSubmit } from '@redchili/egg-ui';
+import { EggForm, EggFieldItem, EggSubmit, EggInput } from '@redchili/egg-ui';
 
-import { Input, Label } from 'remax/one';
+import { Label } from 'remax/one';
 
 export default function FormDemo() {
     const formRef = useRef(null); // form action 
@@ -17,13 +17,4 @@ export default function FormDemo() {
             <EggSubmit >提交</EggSubmit>
         </EggForm>
     )
-}
-
-interface Props {
-    name: string;
-    [key: string]: any
-}
-
-function EggInput(props: Props) {
-    return <Input onInput={props.onInput} onBlur={props.onBlur} onFocus={props.onFocus} value={props.value} />
 }
