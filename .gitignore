@@ -9,3 +9,7 @@ dist
 .DS_Store
 
 .next
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

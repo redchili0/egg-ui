@@ -6,7 +6,7 @@
 import { AppConfig } from "remax/wechat";
 
 const config: AppConfig = {
-  pages: ['pages/index/index', 'pages/flex/flex'],
+  pages: ['pages/index/index', 'pages/flex/flex', 'pages/icon/index'],
   window: {
     navigationBarTitleText: 'Remax Wechat Demo - EGG-UI',
     navigationBarBackgroundColor: '#282c34'
