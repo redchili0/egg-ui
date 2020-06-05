@@ -1,79 +1,72 @@
 .egg-flexbox {
-    display: flex;
+  display: flex;
 }
-
 .egg-flexbox.wrap {
-    flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .egg-flexbox.wrap-reverse {
-    flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse;
 }
 .egg-flexbox.nowrap {
-    flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
-
 .egg-flexbox.row {
-    flex-direction: row;
+  flex-direction: row;
 }
 .egg-flexbox.row-reverse {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 .egg-flexbox.column {
-    flex-direction: column;
+  flex-direction: column;
 }
 .egg-flexbox.column-reverse {
-    flex-direction: column-reverse;
+  flex-direction: column-reverse;
 }
-
-/* align-item */
 .egg-flexbox.align-start {
-    align-items: flex-start;
+  align-items: flex-start;
 }
 .egg-flexbox.align-center {
-    align-items: center;
+  align-items: center;
 }
 .egg-flexbox.align-end {
-    align-items: flex-end;
+  align-items: flex-end;
 }
 .egg-flexbox.align-baseline {
-    align-items: baseline;
+  align-items: baseline;
 }
 .egg-flexbox.align-stretch {
-    align-items: stretch;
+  align-items: stretch;
 }
-
-/* justify-content */
 .egg-flexbox.justify-start {
-    justify-content: start;
+  justify-content: start;
 }
 .egg-flexbox.justify-center {
-    justify-content: center;
+  justify-content: center;
 }
 .egg-flexbox.justify-end {
-    justify-content: end;
+  justify-content: end;
 }
 .egg-flexbox.justify-between {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 .egg-flexbox.justify-around {
-    justify-content: space-around;
+  justify-content: space-around;
 }
-
 .egg-flexbox.alignContent-center {
-    align-content: center;
+  align-content: center;
 }
 .egg-flexbox.alignContent-start {
-    align-content: flex-start;
+  align-content: flex-start;
 }
 .egg-flexbox.alignContent-end {
-    align-content: flex-end;
+  align-content: flex-end;
 }
 .egg-flexbox.alignContent-between {
-    align-content: space-between;
+  align-content: space-between;
 }
 .egg-flexbox.alignContent-around {
-    align-content: space-around;
+  align-content: space-around;
 }
 .egg-flexbox.alignContent-stretch {
-    align-content: stretch;
+  align-content: stretch;
 }

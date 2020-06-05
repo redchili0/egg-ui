@@ -10,7 +10,8 @@
     "jsx": "react",
     "lib": [
       "ES6",
-      "DOM"
+      "DOM",
+      "es2017.object"
     ],
     "outDir": "./dist",
     "rootDir": "./src",

@@ -19,7 +19,13 @@
     },
     "devDependencies": {
         "compose-function": "^3.0.3",
+<<<<<<< HEAD
         "postcss-apply": "^0.12.0",
         "postcss-css-variables": "^0.17.0"
+=======
+        "cssnano": "^4.1.10",
+        "postcss-import": "^12.0.1",
+        "postcss-preset-env": "^6.7.0"
+>>>>>>> master
     }
 }
