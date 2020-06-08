@@ -16,12 +16,14 @@ export type Rule = RequireRule | PatternRule
 
 interface Props {
     name: string;
+    className?: string;
+    style?: Record<string, string>;
     checkMode?: 'blur' | 'input' // 校验的模式，默认 input
     rule?: Rule[];
 }
 
 export default function EggFieldItem(props: React.PropsWithChildren<Props>) {
-    const { children, checkMode } = props;
+    const { children, checkMode, className, style } = props;
     const { collectFieldItem, formData, handleInput, handleBlur } = useContext(FormContext);
 
     useEffect(() => {
@@ -49,7 +51,7 @@ export default function EggFieldItem(props: React.PropsWithChildren<Props>) {
         }
     }
 
-    return <View>
+    return <View className={className} style={style}>
         {
             React.Children.map(children, (child) => {
                 if (!React.isValidElement(child)) {

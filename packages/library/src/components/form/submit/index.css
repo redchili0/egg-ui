@@ -3,7 +3,7 @@
 .egg-submit {
     @apply --button;
     width: 300px;
-    height: 70px;
-    border-radius: 35px;
+    height: 72px;
+    border-radius: 36px;
     font-size: 24px;
 }  
