@@ -2,19 +2,31 @@ import React, { useRef, useState } from 'react';
 import { EggForm, EggFieldItem, EggSubmit, EggInput } from '@redchili/egg-ui';
 
 import { Label } from 'remax/one';
+import { css } from 'linaria';
 
 export default function FormDemo() {
-    const formRef = useRef(null); // form action 
     const [errors, registerError] = useState({});
 
-    console.log('查看下错误啊', errors);
+
+
     return (
-        <EggForm registerError={registerError} ref={formRef} onSubmit={(data) => { console.log('这里执行了', data) }}>
-            <EggFieldItem name="nickname" rule={[{ required: true, message: "请输入值" }]}>
-                <Label htmlFor="nickname" >测试</Label>
+        <EggForm registerError={registerError} onSubmit={(data) => { console.log('这里执行了', data) }}>
+            <EggFieldItem className={css`
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            `} name="nickname" rule={[{ required: true, message: "请输入值" }]}>
+                <Label htmlFor="nickname" className={
+                    css`
+                        font-size: 32px;
+                        margin-right: 10px;
+                    `
+                } >测试:</Label>
                 <EggInput name="nickname" />
             </EggFieldItem>
-            <EggSubmit >提交</EggSubmit>
+            <EggSubmit className={css`
+                margin-top: 20px;
+            `}>提交</EggSubmit>
         </EggForm>
     )
 }

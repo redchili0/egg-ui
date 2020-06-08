@@ -1,7 +1,9 @@
 .egg-input {
-  width: 480px;
-  height: 96px;
+  width: 580px;
+  height: 72px;
   background: rgba(255, 255, 255, 1);
   box-shadow: 0px 7px 64px 0px rgba(0, 0, 0, 0.07);
-  border-radius: 12px;
+  border-radius: 8px;
+  padding: 4px 12px;
+  font-size: 32px;
 }
