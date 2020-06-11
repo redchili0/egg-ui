@@ -5,7 +5,7 @@ NOTICE: 完成期限 6月12日
 > 通用组件
 
 - [x] Button (Ben)
-- [ ] Icon
+- [x] Icon(Pluto)
 
 > 布局
 
@@ -14,7 +14,7 @@ NOTICE: 完成期限 6月12日
 
 > 反馈
 
-- [ ] Modal 对话框
+- [x] Modal 对话框(Pluto)
 - [ ] Loading 加载中
 - [ ] Notification 通知提醒框
 
