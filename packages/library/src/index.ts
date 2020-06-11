@@ -5,3 +5,7 @@ export { default as EggForm } from "./components/form";
 export { default as EggFieldItem } from "./components/form/field_item";
 export { default as EggSubmit } from "./components/form/submit";
 export { default as EggInput } from "./components/form/input";
+export { default as EggModal } from "./components/modal";
+export { default as EggModalHeader } from "./components/modal/header";
+export { default as EggModalContent } from "./components/modal/content";
+export { default as EggModalAction } from "./components/modal/action";

@@ -5,6 +5,9 @@ import classNames from 'classnames';
 import * as eva from 'eva-icons';
 import { EvaFillSvgType, EvaOutLineSvgType } from './types'
 import hexToRgb from './hexToRgb'
+import './index.css'
+
+type animationType = 'zoom' | 'pulse' | 'shake' | 'flip'
 
 interface Props {
     width?: number
@@ -13,14 +16,24 @@ interface Props {
     color?: string
     className?: string
     customizeStyle?: React.CSSProperties
+    animation?: animationType | {
+        type: animationType,
+        infinite: boolean
+    }
 }
 
 export default function EggIcon (prop : Props) {
     const { 
-        width, height, color, className, customizeStyle
+        width, height, color, className, customizeStyle, animation
     } = prop
 
-    const classNameProps = classNames('egg-flexbox', className)
+    const classNameProps = classNames(
+        'egg-flexbox', 
+        className,
+        {'eva-animation': animation},
+        {'eva-infinite': typeof animation === "object" && animation.infinite},
+        {[`eva-icon-${typeof animation === "string" ? animation : animation?.type}`]: animation},
+    )
 
     return (
         <View>

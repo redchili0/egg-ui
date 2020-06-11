@@ -11,7 +11,8 @@ const config: AppConfig = {
     "pages/index/index", 
     "pages/flex/flex", 
     "pages/form/index", 
-    "pages/icon/index"
+    "pages/icon/index",
+    "pages/modal/index"
   ],
   window: {
     navigationBarTitleText: "Remax Wechat Demo - EGG-UI",
