@@ -1,0 +1,30 @@
+.egg-avatar {
+    background-color: #e5e5e5;
+}
+
+.egg-avatar--small {
+    width: 80px;
+    height: 80px;
+}
+.egg-avatar--normal {
+    width: 128px;
+    height: 128px;
+}
+.egg-avatar--large {
+    width: 160px;
+    height: 160px;
+}
+
+.egg-avatar--circle {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.egg-avatar--radio {
+    border-radius: 18px;
+}
+
+.egg-avatar > .avatar-image {
+    width: 100%;
+    height: 100%;
+}
