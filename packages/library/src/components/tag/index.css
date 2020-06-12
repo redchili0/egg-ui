@@ -1,0 +1,28 @@
+.egg-tag {
+    display: inline-block;
+    text-align: center;
+    padding: 12px 28px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    font-size: 32px;
+    background-color: #f7f7f7;
+    color: #666;
+}
+
+.egg-tag--circle {
+    border-radius: 30px;
+}
+
+.egg-tag--small {
+    font-size: 28px;
+    padding: 10px 20px;
+}
+
+.egg-tag--active {
+    background-color: #6979F8;
+    color: #fff;
+}
+
+.egg-tag--disable {
+    opacity: 0.3;
+}

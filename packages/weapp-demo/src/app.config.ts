@@ -13,7 +13,8 @@ const config: AppConfig = {
     "pages/form/index", 
     "pages/icon/index",
     "pages/modal/index",
-    "pages/avatar/index"
+    "pages/avatar/index",
+    "pages/tag/index",
   ],
   window: {
     navigationBarTitleText: "Remax Wechat Demo - EGG-UI",

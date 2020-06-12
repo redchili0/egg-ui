@@ -10,3 +10,4 @@ export { default as EggModalHeader } from "./components/modal/header";
 export { default as EggModalContent } from "./components/modal/content";
 export { default as EggModalAction } from "./components/modal/action";
 export { default as EggAvatar } from "./components/avatar";
+export { default as EggTag } from "./components/tag";
