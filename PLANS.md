@@ -15,7 +15,7 @@ NOTICE: 完成期限 6月24日
 > 视图组件
 
 - [x] Avatar 头像 (头像) (Pluto)
-- [x] Tag 标签 (Pluto)
+- [x] Tag 标签 (Pluto)
 
 > 反馈
 
