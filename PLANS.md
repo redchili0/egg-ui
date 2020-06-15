@@ -1,7 +1,7 @@
 # 开发计划
 
 ### v0.1.0  - weapp
-NOTICE: 完成期限 6月12日
+NOTICE: 完成期限 6月24日
 > 通用组件
 
 - [x] Button (Ben)
@@ -11,6 +11,11 @@ NOTICE: 完成期限 6月12日
 
 - [ ] Flex
 - [ ] FlexSpace
+
+> 视图组件
+
+- [x] Avatar 头像 (头像) (Pluto)
+- [x] Tag 标签 (Pluto)
 
 > 反馈
 
