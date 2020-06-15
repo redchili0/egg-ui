@@ -1,0 +1,42 @@
+.egg-popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1010;
+    visibility: hidden;
+    -webkit-transition: visibility 200ms ease-in;
+    transition: visibility 200ms ease-in;
+}
+
+.egg-popup--active {
+    visibility: visible;
+}
+
+.egg-popup__overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0,0,0,.3);
+}
+
+.egg-action-sheet__container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 99;
+    min-height: 300px;
+    border-radius: 16rpx 16rpx 0 0;
+    background-color: #FAFAFA;
+    transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+    transform: translate3d(0, 100%, 0);
+}
+
+.egg-popup--active > .egg-action-sheet__container {
+    transform: translate3d(0, 0, 0);
+}
