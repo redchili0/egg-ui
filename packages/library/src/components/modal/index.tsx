@@ -53,7 +53,6 @@ export default function EggModal(props: React.PropsWithChildren<Props>) {
 
 	// 点击遮罩层
 	const clickMask = () => {
-		console.log('clickMask')
 		if (maskClosable) {
 			set_isOpened(false)
 			handleClosle()

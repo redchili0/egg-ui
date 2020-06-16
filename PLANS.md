@@ -14,12 +14,13 @@ NOTICE: 完成期限 6月24日
 
 > 视图组件
 
-- [x] Avatar 头像 (头像) (Pluto)
+- [x] Avatar 头像 (Pluto)
 - [x] Tag 标签 (Pluto)
 
 > 反馈
 
 - [x] Modal 对话框(Pluto)
+- [x] Popup 弹窗 (Pluto)
 - [ ] Loading 加载中
 - [ ] Notification 通知提醒框
 

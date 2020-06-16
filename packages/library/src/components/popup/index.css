@@ -25,18 +25,57 @@
 
 .egg-action-sheet__container {
     position: absolute;
-    bottom: 0;
+    /* bottom: 0;
     left: 0;
-    width: 100%;
-    padding: 20px 0;
+    width: 100%; */
+    /* padding: 20px 0; */
     z-index: 99;
-    min-height: 300px;
-    border-radius: 16rpx 16rpx 0 0;
+    /* min-height: 300px; */
     background-color: #FAFAFA;
     transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
-    transform: translate3d(0, 100%, 0);
+    /* transform: translate3d(0, 100%, 0); */
 }
 
 .egg-popup--active > .egg-action-sheet__container {
     transform: translate3d(0, 0, 0);
+}
+
+.bottom {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 200px;
+    border-radius: 24px 24px 0 0;
+    transform: translate3d(0, 100%, 0);
+}
+
+.left {
+    left: 0;
+    top: 0;
+    transform: translate3d(-100%, 0, 0);
+    border-radius: 0 24px 24px 0;
+    min-width: 200px;
+    height: 100%;
+}
+
+.right {
+    right: 0;
+    top: 0;
+    border-radius: 24px 0 0 24px;
+    min-width: 200px;
+    height: 100%;
+    transform: translate3d(100%, 0, 0);
+}
+
+.top {
+    left: 0;
+    top: 0;
+    transform: translate3d(0, -100%, 0);
+    border-radius: 0 0 24px 24px;
+    min-height: 200px;
+    width: 100%;
+}
+
+.egg-popup--square {
+    border-radius: 0;
 }
