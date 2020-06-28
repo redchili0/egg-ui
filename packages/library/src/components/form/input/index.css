@@ -1,9 +1,100 @@
 .egg-input {
-  width: 580px;
-  height: 72px;
-  background: rgba(255, 255, 255, 1);
-  box-shadow: 0px 7px 64px 0px rgba(0, 0, 0, 0.07);
-  border-radius: 8px;
+  /* width: 580px; */
+  /*  */
+  background: #fff;
+  /* box-shadow: 0px 7px 64px 0px rgba(0, 0, 0, 0.07); */
+  /* border-radius: 8px; */
   padding: 4px 12px;
   font-size: 32px;
+  position: relative;
+  padding: 18px 0 18px 10px;
+}
+.egg-input::after {
+  content: "";
+  position: absolute;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  box-sizing: border-box;
+  pointer-events: none;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  border: 0 solid #D0C9D6;
+  -webkit-transform: scale(.5);
+  transform: scale(.5);
+  border-bottom-width: 1PX;
+}
+.egg-input--disabled {
+  opacity: .4;
+}
+.egg-input__mask {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  z-index: 100;
+}
+.egg-input__mask--editable, .egg-input__mask--disabled {
+  display: block;
+}
+
+.egg-input__container {
+  display: flex;
+  align-items: center;
+}
+.egg-input__title {
+  font-weight: 500;
+  font-size: 30px;
+  vertical-align: middle;
+  margin-right: 12px;
+  text-align: left;
+  width: 170px;
+}
+.egg-input__title--required::before {
+  display: inline-block;
+  margin-right: .17067rem;
+  color: #ff4949;
+  font-size: .59733rem;
+  font-family: SimSun,sans-serif;
+  line-height: 1;
+  content: "*";
+}
+.egg-input__children {
+  display: inline-flex;
+  position: relative;
+  text-align: center;
+  padding: 0 12px;
+}
+.egg-input__children > image, img {
+  width: 100%;
+  height: 100%;
+}
+.egg-input__children::after {
+  content: "";
+  position: absolute;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  box-sizing: border-box;
+  pointer-events: none;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  border: 0 solid #D0C9D6;
+  -webkit-transform: scale(.5);
+  transform: scale(.5);
+  border-left-width: 1PX;
+}
+
+.egg-input__wxapp {
+  background-color: transparent;
+  color: #333;
+  font-size: 30px;
+  height: 52px;
+  line-height: 1.5;
+  width: 100%;
+  flex: 1;
 }

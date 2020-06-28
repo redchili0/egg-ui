@@ -12,3 +12,4 @@ export { default as EggModalAction } from "./components/modal/action";
 export { default as EggAvatar } from "./components/avatar";
 export { default as EggTag } from "./components/tag";
 export { default as EggPopup } from "./components/popup";
+export { default as EggLoading } from "./components/loading";
