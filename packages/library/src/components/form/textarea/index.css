@@ -1,0 +1,13 @@
+.egg-textarea {
+    padding: 14px;
+    width: 100%;
+    font-size: 28px;
+    line-height: 1.5;
+    border-radius: 12px;
+    background-color: #fff;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+.egg-textarea > textarea {
+    width: 100%;
+}

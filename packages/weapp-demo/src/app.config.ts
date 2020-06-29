@@ -18,6 +18,8 @@ const config: AppConfig = {
     "pages/popup/index",
     "pages/loading/index",
     "pages/input/index",
+    "pages/textarea/index",
+    "pages/radio/index",
   ],
   window: {
     navigationBarTitleText: "Remax Wechat Demo - EGG-UI",
