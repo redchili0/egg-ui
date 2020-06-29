@@ -27,10 +27,10 @@ NOTICE: 完成期限 6月24日
 > 数据录入
 
 - [ ] From 表单(Ben)
-- [ ] Input 输入框(Ben)
-- [ ] Textarea 多行文本输入框
-- [ ] Radio 单选框
-- [ ] RadioGroup 多选框组合
+- [x] Input 输入框(Ben)
+- [x] Textarea 多行文本输入框
+- [x] Radio 单选框
+- [x] RadioGroup 多选框组合
 - [ ] Select 选择(Ben)
 
 > 数据展示
