@@ -17,6 +17,12 @@
                     "name": "button.mdx",
                     "title": "Button 按钮",
                     "url": "/通用组件/button"
+                },
+                {
+                    "path": "pages/通用组件/icon.mdx",
+                    "name": "icon.mdx",
+                    "title": "Icon 按钮",
+                    "url": "/通用组件/icon"
                 }
             ],
             "size": null,

@@ -1,18 +1,19 @@
 var path = require("path");
 var MiniCssExtractPlugin = require("mini-css-extract-plugin");
+var merge = require('webpack-merge');
 
-module.exports = {
-  // entry: path.resolve(__dirname, "src/index.ts"),
-  entry: {
-    button: "./src/components/button/index.tsx",
-  },
+var config = {
+  entry: path.resolve(__dirname, "src/index.ts"),
+  // entry: {
+  //   button: "./src/components/button/index.tsx",
+  // },
   mode: "development",
   output: {
-    path: path.resolve(__dirname, "dist/components"),
+    path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
     libraryTarget: "commonjs2",
   },
-  devtool: "inline-source-map",
+  // devtool: "inline-source-map",
   externals: ["react", "remax"],
   resolve: {
     // Add `.ts` and `.tsx` as a resolvable extension.
@@ -31,24 +32,27 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        exclude: /node_modules/,
+        // exclude: /node_modules/,
         use: [
           MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
             options: { importLoaders: 1 },
           },
-          {
-            loader: "postcss-loader",
-            options: {
-              config: {
-                path: __dirname + "/postcss.config.js",
-              },
-            },
-          },
+          // {
+          //   loader: "postcss-loader",
+          //   options: {
+          //     config: {
+          //       path: __dirname + "/postcss.config.js",
+          //     },
+          //   },
+          // },
         ],
       },
     ],
+  },
+  optimization: {
+    usedExports: true,
   },
   // 提取组件样式，并统一放置到 style 文件夹下
   plugins: [
@@ -57,3 +61,6 @@ module.exports = {
     }),
   ],
 };
+
+
+module.exports = merge({}, config)

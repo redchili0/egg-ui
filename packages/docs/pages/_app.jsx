@@ -20,6 +20,7 @@ export default function App(props) {
           "index.mdx": true,
           "通用组件": {
             "button.mdx": true,
+            "icon.mdx": true,
           },
         }}
       >

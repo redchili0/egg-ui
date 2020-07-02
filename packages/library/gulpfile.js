@@ -10,6 +10,7 @@ var cssnano = require("cssnano");
 function defaultTask(cb) {
   gulp
     .src("src/**/*.css")
+    .pipe(gulp.dest("dist/style"))
     .pipe(sourcemaps.init())
     .pipe(
       postcss([
