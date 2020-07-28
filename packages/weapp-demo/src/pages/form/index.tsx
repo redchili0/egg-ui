@@ -7,8 +7,6 @@ import { css } from 'linaria';
 export default function FormDemo() {
     const [errors, registerError] = useState({});
 
-
-
     return (
         <EggForm registerError={registerError} onSubmit={(data) => { console.log('这里执行了', data) }}>
             <EggFieldItem className={css`
