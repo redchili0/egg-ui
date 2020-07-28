@@ -1,6 +1,6 @@
 {
   "name": "@redchili/egg-ui",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "author": "ben14 <544652471@qq.com>",
   "homepage": "",
@@ -19,7 +19,8 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
     "dev": "gulp dev",
-    "build:weapp": "rimraf dist && node ./scripts/copy.js && gulp && tsc"
+    "demo:weapp": "rimraf dist && node ./scripts/copy.js && gulp",
+    "build:weapp": "rimraf dist && gulp && tsc"
   },
   "dependencies": {
     "@redchili/egg-ui": "^0.0.3",
