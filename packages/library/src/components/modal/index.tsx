@@ -33,7 +33,7 @@ export default function EggModal(props: React.PropsWithChildren<Props>) {
 		} 
 	}, [props.isOpened])
 
-	const handleClosle = () => {
+	const handleClose = () => {
 		if (typeof onAfterClose === "function") {
 			onAfterClose()
 		}
@@ -55,7 +55,7 @@ export default function EggModal(props: React.PropsWithChildren<Props>) {
 	const clickMask = () => {
 		if (maskClosable) {
 			set_isOpened(false)
-			handleClosle()
+			handleClose()
 		}
 	}
 

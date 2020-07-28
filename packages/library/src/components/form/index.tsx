@@ -1,7 +1,8 @@
 import React, { useState, forwardRef, useImperativeHandle } from 'react';
 import { Form as ReForm } from 'remax/one';
 import { FormContext } from './context';
-import { Rule, RequireRule, PatternRule } from './field_item';
+import FieldItem, { Rule, RequireRule, PatternRule } from './field_item';
+import Submit from './submit';
 import { singleObjToArray } from '../../util/single_obj_to_array';
 
 type Data = Record<string, string | number>;
@@ -135,3 +136,5 @@ const EggForm: React.ForwardRefRenderFunction<{}, React.PropsWithChildren<Props>
 }
 
 export default forwardRef(EggForm);
+export const EggFieldItem = FieldItem;
+export const EggSubmit = Submit;
