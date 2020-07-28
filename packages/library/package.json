@@ -1,6 +1,6 @@
 {
   "name": "@redchili/egg-ui",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "",
   "author": "ben14 <544652471@qq.com>",
   "homepage": "",
@@ -10,7 +10,7 @@
     "test": "__tests__"
   },
   "files": [
-    "components"
+    "dist"
   ],
   "publishConfig": {
     "registry": "https://registry.yarnpkg.com/",
