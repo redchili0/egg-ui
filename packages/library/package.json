@@ -23,7 +23,6 @@
     "build:weapp": "rimraf dist && gulp && tsc"
   },
   "dependencies": {
-    "@redchili/egg-ui": "^0.0.3",
     "@types/classnames": "^2.2.10",
     "classnames": "^2.2.6",
     "eva-icons": "^1.1.3",
