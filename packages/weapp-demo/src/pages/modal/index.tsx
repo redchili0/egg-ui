@@ -34,6 +34,7 @@ export default function modalDemo () {
           <EggModal
             isOpened={isOpened1}
             onAfterClose={() => setIsOpened1(false)}
+            
           >
             <EggModalHeader>我是正常使用标题</EggModalHeader>
             <EggModalContent>我是正常使用内容</EggModalContent>
